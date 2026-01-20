@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "name": "viibe-coder",
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/next"
+    }
+  ],
+  "env": {
+    "NEXT_PUBLIC_BASE_URL": "https://viibe-coder.vercel.app"
+  }
+}
