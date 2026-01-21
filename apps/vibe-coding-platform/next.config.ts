@@ -2,11 +2,27 @@ import type { NextConfig } from 'next'
 import { withBotId } from 'botid/next/config'
 
 const nextConfig: NextConfig = {
-  webpack(config) {
+  serverExternalPackages: [
+    '@remotion/bundler',
+    '@remotion/renderer',
+    '@remotion/cli',
+  ],
+  webpack(config, { isServer }) {
     config.module.rules.push({
       test: /\.md/,
       type: 'asset/source',
     })
+
+    // Exclude Remotion from client bundle
+    if (!isServer) {
+      config.resolve.alias = {
+        ...config.resolve.alias,
+        '@remotion/bundler': false,
+        '@remotion/renderer': false,
+        '@remotion/cli': false,
+      }
+    }
+
     return config
   },
   turbopack: {
