@@ -63,4 +63,15 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
+**📖 [Guide de déploiement complet (étape par étape)](./DEPLOYMENT_GUIDE.md)** - Parfait pour les débutants !
+
+### Déploiement rapide :
+
+1. Allez sur [vercel.com/signup](https://vercel.com/signup)
+2. Connectez votre compte GitHub
+3. Importez le repository `Th3lasthack/viibe`
+4. **Important** : Définissez le **Root Directory** à `apps/vibe-coding-platform`
+5. Cliquez sur "Deploy"
+6. Votre site sera en ligne en 3 minutes ! 🎉
+
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
